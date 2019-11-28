@@ -20,5 +20,13 @@ class ProductPage(BasePage):
         assert price == price_in_basket, "Цена товара не совпадает с ценой в корзине"
         print("Цена товара совпадает с ценой в корзине")
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успехе представлено, но не должно быть"
+
+    def should_disappeared_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успехе представлено, но не должно быть"
+
 
 
