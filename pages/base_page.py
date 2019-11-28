@@ -1,5 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException
 import math
+import time
 
 
 class BasePage():
@@ -10,6 +11,7 @@ class BasePage():
 
     def open(self):
         self.browser.get(self.url)
+        self.browser.implicitly_wait(10)
 
     def is_element_present(self, how, what):
         try:

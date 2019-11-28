@@ -8,6 +8,7 @@ class ProductPage(BasePage):
         button.click()
 
 
+
     def should_be_check_basket(self):
         product = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         product_in_basket = self.browser.find_element(*ProductPageLocators.NAME_IN_BASKET).text
