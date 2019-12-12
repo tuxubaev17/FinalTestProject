@@ -3,7 +3,7 @@
 venv/
 pytest_cache/
 __pycache__/
-
+__pycache__
 
 
 # Created by https://www.gitignore.io
@@ -95,3 +95,4 @@ local_settings.py
 
 .env
 db.sqlite3
+
